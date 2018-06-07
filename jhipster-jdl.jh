@@ -1,0 +1,298 @@
+entity Profile {
+    creationDate Instant required
+    image ImageBlob
+    gender Gender required
+    phone String maxlength(20) required
+    bio String maxlength(7500)
+    birthdate Instant
+    civilStatus CivilStatus
+    lookingFor Gender
+    purpose Purpose
+    physical Physical
+    religion Religion
+    ethnicGroup EthnicGroup
+    studies Studies
+    sibblings Integer min(0) max(20)
+    eyes Eyes 
+    smoker Smoker
+    children Children
+    futureChildren FutureChildren
+    pet Boolean
+    userPoints Long min(100)
+}
+
+entity Groups {
+    creationDate Instant required
+    groupname String minlength(2) maxlength(100) required
+    image ImageBlob
+    isActive Boolean
+}
+
+entity Message {
+    creationDate Instant required
+    messageText TextBlob minbytes(3) maxbytes(7500) required
+    isDeliverd Boolean
+}
+
+entity Blog {
+    creationDate Instant required
+    title String minlength(2) maxlength(100) required
+    image ImageBlob
+}
+  
+entity Post {
+    creationDate Instant required
+    publicationDate Instant
+    headline String minlength(2) maxlength(100) required
+    lead String minlength(2) maxlength(1000)
+    body TextBlob minbytes(3) maxbytes(50000) required
+    quote String minlength(2) maxlength(1000)
+    conclusion String minlength(2) maxlength(2000)
+    image ImageBlob
+}
+
+entity Comment {
+    creationDate Instant required
+    commentText TextBlob minbytes(3) maxbytes(5000) required
+    isOffensive Boolean
+}
+
+entity FrontPageConfig {
+    creationDate Instant required
+}
+
+entity Album {
+    creationDate Instant required
+}
+
+entity Photo {
+    creationDate Instant required
+	image ImageBlob
+}
+
+entity Follows {
+    creationDate Instant
+}
+
+entity Blockeduser {
+    creationDate Instant
+}
+
+entity Message {
+    creationDate Instant required
+    messageText TextBlob minbytes(3) maxbytes(7500) required
+    isDeliverd Boolean
+}
+
+entity Notification {
+    creationDate Instant required
+    notificationDate Instant
+    notificationReason NotificationReason required
+    notificationText String minlength(2) maxlength(100)
+    isDeliverd Boolean
+}
+
+entity Topic {
+	topicName String minlength(2) maxlength(40) required
+}
+
+entity Tag {
+	tagName String minlength(2) maxlength(40) required
+}
+
+entity Interest {
+    interestName String minlength(2) maxlength(40) required
+}
+
+entity Activity {
+    activityName String minlength(2) maxlength(40) required
+}
+
+entity Celeb {
+    celebName String minlength(2) maxlength(40) required
+}
+
+entity Country {
+	countryName String minlength(2) maxlength(40) required
+}
+
+entity State {
+	stateName String minlength(2) maxlength(40) required
+}
+
+entity City {
+	cityName String minlength(2) maxlength(40) required
+}
+
+entity Address{
+    addressLine1 String minlength(2) maxlength(80) required
+    addressLine2 String minlength(2) maxlength(40)
+    postalCode String minlength(2) maxlength(10) required
+}
+
+entity GeoCoordinates {
+	latitude Double required
+    longitude Double required
+}
+
+entity FrontPageConfig {
+    creationDate Instant required
+    topNews1 Long
+    topNews2 Long
+    topNews3 Long
+    topNews4 Long
+    topNews5 Long
+    latestNews1 Long
+    latestNews2 Long
+    latestNews3 Long
+    latestNews4 Long
+    latestNews5 Long
+    usefulLinks1 Long
+    usefulLinks2 Long
+    usefulLinks3 Long
+    usefulLinks4 Long
+    usefulLinks5 Long
+    usefulLinks6 Long
+    breakingNews1 Long
+    recentPosts1 Long
+    recentPosts2 Long
+    recentPosts3 Long
+    recentPosts4 Long
+    featuredArticles1 Long
+    featuredArticles2 Long
+    featuredArticles3 Long
+    featuredArticles4 Long
+    featuredArticles5 Long
+    featuredArticles6 Long
+    featuredArticles7 Long
+    featuredArticles8 Long
+    featuredArticles9 Long
+    featuredArticles10 Long
+    recentVideos1 Long
+    recentVideos2 Long
+    recentVideos3 Long
+    recentVideos4 Long
+    recentVideos5 Long
+    recentVideos6 Long
+    recentVideos7 Long
+    recentVideos8 Long
+    recentVideos9 Long
+    popularNews1 Long
+    popularNews2 Long
+    popularNews3 Long
+    popularNews4 Long
+    popularNews5 Long
+    popularNews6 Long
+    popularNews7 Long
+    popularNews8 Long
+    weeklyNews1 Long
+    weeklyNews2 Long
+    weeklyNews3 Long
+    weeklyNews4 Long
+    popularStories1 Long
+    popularStories2 Long
+    popularStories3 Long
+    popularStories4 Long
+    popularStories5 Long
+    popularStories6 Long
+}
+
+// ENUMS:
+enum Gender {
+    MALE, FEMALE, OTHER
+}
+
+enum CivilStatus {
+    SINGLE, MARRIED, DIVORCED, WIDOWER, SEPARATED, PAIRED_UP, OTHER
+}
+
+enum Purpose {
+    NOT_INTERESTED, FRIENDSHIP, MEET_PEOPLE, STABLE_RELATIONSHIP, MARRIAGE, OTHER
+}
+
+enum Physical {
+    NA, THIN, ATHLETIC, NORMAL, CORPULENT, BULKY, OTHER
+}
+
+enum Religion {
+    NA, ATHEIST, AGNOSTIC, CATHOLIC, JEWISH, ISLAMIC, OTHER
+}
+
+enum EthnicGroup {
+    NA, MIXED, WHITE, LATIN, GIPSY, AFRO, HINDU, ARAB, ASIAN, INDIAN, OTHER
+}
+
+enum Studies {
+    NA, PRIMARY, HIGH_SCHOOL, TECHNICAL, COLLEGE, MASTER, DOCTORATE, OTHER
+}
+
+enum Eyes {
+    NA, BLUE, GREEN, BROWN, BLACK, CHESTNUT, OTHER
+}
+
+enum Smoker {
+    NA, YES, NO, OCCASIONALLY
+}
+
+enum Children {
+    NA, YES, NO, GREATER_THAN_18
+}
+
+enum FutureChildren {
+    NA, YES, NO
+}
+
+enum NotificationReason {
+    FOLLOWER, UNFOLLOWER, GROUP_FOLLOWER, GROUP_UNFOLLOWER, PROPOSAL_RELEASED, NEW_GROUP_STATUS, FOLLOWER_STATUS, AUTHORIZED_GROUP_FOLLOWER, UNAUTHORIZED_GROUP_FOLLOWER
+}
+
+
+// RELATIONSHIPS:
+relationship OneToOne {
+    Profile{groups(groupname)} to Groups{profile}
+    Profile{album} to Album{profile}
+    Profile{address} to Address
+    Address{geoCoordinates} to GeoCoordinates{address}
+
+}
+
+relationship ManyToOne {
+    Groups{user(id) required} to User{groups}
+    Notification{user(id) required} to User{notification}
+    Profile{user(id) required} to User{profile}
+}
+
+relationship OneToMany {
+    Profile{blog} to Blog{profile required}
+    Blog{post} to Post{blog(title) required}
+    Post{comment} to Comment{post(headline) required}
+    Profile{comment} to Comment{profile required}
+    Profile{message} to Message{profile required}
+    Profile{followed(id)} to Follows{followed(id)}
+    Profile{following(id)} to Follows{following(id)}
+    Profile{blockinguser(id)} to Blockeduser{blockinguser(id)}
+    Profile{blockeduser(id)} to Blockeduser{blockeduser(id)}
+    Album{photo} to Photo{album}
+    Country{state(stateName)} to State{country(countryName)}
+    State{city(cityName)} to City{state(stateName)}
+    City{address} to Address{city(cityName)}
+
+}
+
+relationship ManyToMany {
+	Tag{post(headline)} to Post{tag(tagName)}
+    Topic{post(headline)} to Post{topic(topicName)}
+    Interest{profile} to Profile{interest(interestName)}
+    Activity{profile} to Profile{activity(activityName)}
+    Celeb{profile} to Profile{celeb(celebName)}
+}
+
+// DTO for all
+dto * with mapstruct
+
+// Set pagination options
+paginate all with pagination
+
+// Set service options to all except few
+service all with serviceImpl
+
