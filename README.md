@@ -25,7 +25,7 @@ https://gradlempty.herokuapp.com/#/
 
 ... but I think we can learn more if we do more complicated things together! This great books: The JHipster Mini-Book 4.5 by Matt Raible  https://www.infoq.com/minibooks/jhipster-4x-mini-book and Full Stack Development with JHipster can take you to Heroku, even if you are not an expert, but I would like to go beyond that.
 
-If we can create a group of live examples that shows how to do what everybody is asking, time and again: Matt Raible, Jon Ruddell, Gaël Marziou and all the great guys that are helping us (in Gitter or StackOverflow), it will be a success!!!
+If we can create a group of live examples (https://github.com/Tonterias/JHipsterGroup/blob/master/app.md) that shows how to do what everybody is asking, time and again: Matt Raible, Jon Ruddell, Gaël Marziou and all the great guys that are helping us (in Gitter or StackOverflow), it will be a success!!!
 
-So if you want to share your problems and solutions with others, contact me in GitHub or send me an email (raroraroraro2018@gmail.com). We will start soon (with some drafts) to end with a JDL file similar to the attached: jhipster-jdl.jh
+So if you want to share your problems and solutions with others, contact me in GitHub or send me an email (raroraroraro2018@gmail.com). We will start soon (with some drafts) to end with a JDL file similar to the attached: https://github.com/Tonterias/JHipsterGroup/blob/master/jhipster-jdl.jh
 
