@@ -13,4 +13,26 @@ RARO is the combination of several sub-apps or parts: a dating site, a newspaper
 
 •	Other ideas: I have a few more ideas, but first I would like to start with the ones already mentioned here.
 
-This should be a collaborative project that should be interesting for other developers to join, at any point, either because they want to learn about how we have done it (beginners) or propose new ideas (experienced).
+This should be a collaborative project that should be interesting for other developers to join, at any point, either because they want to learn about how we have done it (beginners) or propose new ideas (experienced) to improve the code.
+
+The story goes like this: fisrt, I learned Spring and Angular, then I learned Jhipster with these books:
+
+·         The JHipster Mini-Book 4.5 by Matt Raible. Now with a chapter on microservices!
+
+·         Full Stack Development with JHipster by Deepu K Sasidharan and Sendil Kumar. Get it on Packt and Amazon. https://www.safaribooksonline.com/library/view/full-stack-development/9781788476317/
+
+So this is the starting point. Anyone who reads these books should have, at least, the same level as I have. From there, we should offer examples and solutions for the things that are not covered in these books. Let me give you some examples that you might thing are easy and well known things, but that are not covered in the books and not given boiler code by Jhipster, so they might be a problem for beginners:
+
+·         Cascade deletion: Here is an example to see how it can be added.
+
+·         Create a new user: Modify these files.
+
+·         Open access to the REST Api: like this example
+
+·         Different ways to block un-authorized code: Example
+
+·         Use a template like Unify to save code time in the front end: This is a time saver!
+
+·         And more that we will find....
+
+I will complete this index as we include new material.
